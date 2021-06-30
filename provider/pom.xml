@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.3.RELEASE</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.imooc</groupId>
+    <artifactId>dubbo-demo-provider</artifactId>
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.apache.dubbo/dubbo-spring-boot-starter -->
+		<dependency>
+		    <groupId>org.apache.dubbo</groupId>
+		    <artifactId>dubbo</artifactId>
+		    <version>2.7.12</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.alibaba/dubbo -->
+		<!-- <dependency>
+		    <groupId>com.alibaba</groupId>
+		    <artifactId>dubbo</artifactId>
+		    <version>2.6.10</version>
+		</dependency> -->
+		<!-- https://mvnrepository.com/artifact/org.apache.zookeeper/zookeeper -->
+		<dependency>
+		    <groupId>org.apache.zookeeper</groupId>
+		    <artifactId>zookeeper</artifactId>
+		    <version>3.4.13</version>
+		    <exclusions> 
+				<exclusion> <groupId>org.slf4j</groupId> <artifactId>slf4j-log4j12</artifactId></exclusion>
+			 	<exclusion> <groupId>log4j</groupId> <artifactId>log4j</artifactId> </exclusion>
+			</exclusions> 
+		</dependency>
+		<dependency>
+            <groupId>com.101tec</groupId>
+            <artifactId>zkclient</artifactId>
+            <version>0.5</version>
+             <exclusions> 
+				<exclusion> <groupId>org.slf4j</groupId> <artifactId>slf4j-log4j12</artifactId></exclusion>
+			 	<exclusion> <groupId>log4j</groupId> <artifactId>log4j</artifactId> </exclusion>
+			</exclusions> 
+        </dependency>
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-framework</artifactId>
+            <version>2.8.0</version>
+             <exclusions> 
+				<exclusion> <groupId>org.slf4j</groupId> <artifactId>slf4j-log4j12</artifactId></exclusion>
+			 	<exclusion> <groupId>log4j</groupId> <artifactId>log4j</artifactId> </exclusion>
+			</exclusions> 
+        </dependency>
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-recipes</artifactId>
+            <version>2.8.0</version>
+             <exclusions> 
+				<exclusion> <groupId>org.slf4j</groupId> <artifactId>slf4j-log4j12</artifactId></exclusion>
+			 	<exclusion> <groupId>log4j</groupId> <artifactId>log4j</artifactId> </exclusion>
+			</exclusions> 
+        </dependency>
+				
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+		<dependency>
+		    <groupId>com.alibaba</groupId>
+		    <artifactId>fastjson</artifactId>
+		    <version>1.2.76</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.esotericsoftware/kryo -->
+		<dependency>
+		    <groupId>com.esotericsoftware</groupId>
+		    <artifactId>kryo</artifactId>
+		    <version>5.0.4</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.xbean/xbean-reflect -->
+		<dependency>
+		    <groupId>org.apache.xbean</groupId>
+		    <artifactId>xbean-reflect</artifactId>
+		    <version>4.20</version>
+		</dependency>
+		
+        <dependency>
+            <groupId>com.imooc</groupId>
+            <artifactId>dubbo-demo-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!-- <dependency>
+		        <groupId>org.springframework.boot</groupId>
+		        <artifactId>spring-boot-starter-tomcat</artifactId>
+		        <scope>provided</scope>
+		</dependency> -->
+    </dependencies>
+    
+
+</project>
